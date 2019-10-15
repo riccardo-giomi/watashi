@@ -11,6 +11,7 @@ const useStyles = makeStyles(theme => {
       position: `fixed`,
       left: 0,
       bottom: 0,
+      background: theme.palette.background.default,
     },
   }
 })
