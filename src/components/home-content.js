@@ -3,7 +3,7 @@ import React from "react"
 const HomeContent = () => (
   <div>
     <h4>Hi! Welcome to my own website</h4>
-    earch Google or type a URL
+    <p>
       This is my personal website, for now just a place to store my contact
       information.
     </p>
