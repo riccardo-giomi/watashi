@@ -13,20 +13,31 @@ const useStyles = makeStyles(theme => {
       bottom: 0,
       background: theme.palette.background.default,
     },
+    copyright: {
+      fontSize: `0.9rem`,
+    },
   }
 })
 
-const Copyright = () => (
-  <Typography variant="body2" color="textSecondary" align="center">
-    Riccardo Giomi
-    {` | `}
-    NIE: Y2764240-E
-    {` | `}
-    Tenerife, Spain
-    {` | `}
-    contact@riccardogiomi.com
-  </Typography>
-)
+const Copyright = () => {
+  const classes = useStyles()
+  return (
+    <Typography
+      variant="body2"
+      align="center"
+      color="textSecondary"
+      className={classes.copyright}
+    >
+      Riccardo Giomi
+      {` | `}
+      NIE: Y2764240-E
+      {` | `}
+      Tenerife, Spain
+      {` | `}
+      contact@riccardogiomi.com
+    </Typography>
+  )
+}
 
 export default () => {
   const classes = useStyles()
