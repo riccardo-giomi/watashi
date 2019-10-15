@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Riccardo Giomi`,
-    description: `Just a personal website developed with React and Gatsby that could become the way I talk to the world about myself.`,
+    siteUrl: `https://riccardogiomi.com`,
+    description: `Riccardo Giomi, personal and professional contact website`,
     author: `Riccardo Giomi`,
   },
   plugins: [

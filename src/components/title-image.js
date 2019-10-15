@@ -1,9 +1,20 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { makeStyles } from "@material-ui/core/styles"
 import { Avatar } from "@material-ui/core"
 
+const useStyles = makeStyles(theme => {
+  return {
+    avatar: {
+      backgroundColor: theme.palette.secondary,
+    },
+  }
+})
+
 const TitleImage = () => {
+  const classes = useStyles()
+
   const data = useStaticQuery(graphql`
     query {
       site {
@@ -22,7 +33,7 @@ const TitleImage = () => {
   `)
   return (
     <Avatar
-      style={{ backgroundColor: `white` }}
+      className={classes.avatar}
       title={data.site.siteMetadata.title}
       alt={data.site.siteMetadata.title}
     >

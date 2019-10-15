@@ -1,39 +1,42 @@
 import PropTypes from "prop-types"
 import React from "react"
 
-import { Link } from "gatsby"
-
+import { Link as GatsbyLink } from "gatsby"
 import { AppBar, Toolbar, Typography } from "@material-ui/core"
+import { makeStyles } from "@material-ui/core/styles"
 
 import TitleImage from "./title-image"
 
-const Header = ({ siteTitle }) => (
-  <div style={{ flexGrow: 1 }}>
-    <AppBar>
-      <Toolbar>
-        <TitleImage />
-        <Link
-          to="/"
-          style={{ textDecoration: `none`, color: `white`, flexGrow: 1 }}
-        >
-          <Typography
-            style={{ marginLeft: 10 }}
-            variant="h6"
-            color="inherit"
-            position="static"
-            noWrap
-          >
-            {siteTitle}
-          </Typography>
-        </Link>
-        <Link to="/curriculum" style={{ color: `white` }}>
-          Curriculum
-        </Link>
-      </Toolbar>
-    </AppBar>
-    <Toolbar />
-  </div>
-)
+const useStyles = makeStyles({
+  root: { flexGrow: 1 },
+  link: { textDecoration: `none`, color: `black`, flexGrow: 1 },
+  title: { marginLeft: 10 },
+})
+
+const Header = ({ siteTitle }) => {
+  const classes = useStyles()
+  return (
+    <div className={classes.root}>
+      <AppBar>
+        <Toolbar>
+          <TitleImage />
+          <GatsbyLink to="/" className={classes.link}>
+            <Typography
+              className={classes.title}
+              variant="h5"
+              color="inherit"
+              position="static"
+              noWrap
+            >
+              {siteTitle}
+            </Typography>
+          </GatsbyLink>
+        </Toolbar>
+      </AppBar>
+      <Toolbar />
+    </div>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
