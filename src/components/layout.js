@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { Container, CssBaseline } from "@material-ui/core"
+import { CssBaseline } from "@material-ui/core"
 import { ThemeProvider } from "@material-ui/core/styles"
 
 import theme from "./theme"
@@ -24,11 +24,9 @@ const Layout = ({ children, ...props }) => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container style={{ height: `100%` }}>
-        <Header siteTitle={`${data.site.siteMetadata.title}`} />
-        {children}
-        <Footer />
-      </Container>
+      <Header siteTitle={`${data.site.siteMetadata.title}`} />
+      {children}
+      <Footer />
     </ThemeProvider>
   )
 }

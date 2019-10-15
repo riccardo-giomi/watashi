@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => {
   return {
     content: {
       minHeight: 115,
-      margin: `15px 0 15px 10px`,
+      margin: `20px 30px 15px 10px`,
       padding: `10px 50px 10px 20px`,
     },
     icons: {
@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => {
       border: 0,
       position: `fixed`,
       right: 0,
-      top: 80,
+      top: 90,
     },
   }
 })
@@ -35,7 +35,9 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <Paper className={classes.content}><HomeContent/></Paper>
+      <Paper className={classes.content}>
+        <HomeContent />
+      </Paper>
       <Container fixed className={classes.icons}>
         <IconButton href="mailto:contact@riccardogiomi.com">
           <MailOutline />
