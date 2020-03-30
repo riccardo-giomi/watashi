@@ -10,7 +10,7 @@ const HomeContent = () => (
     <h4>About me</h4>
     <p>
       I am an Italian freelancer sofware engineer, living in Tenerife (Spain)
-      and currenly working remotely for an Italian software company.
+      and Currently looking for new remote job opportunities.
     </p>
     <h4>About Tenerife</h4>
     <p>

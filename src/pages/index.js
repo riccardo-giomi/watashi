@@ -8,6 +8,7 @@ import { Container, Paper } from "@material-ui/core"
 import IconButton from "@material-ui/core/IconButton"
 import MailOutline from "@material-ui/icons/MailOutline"
 import LinkedIn from "@material-ui/icons/LinkedIn"
+import GitHubIcon from '@material-ui/icons/GitHub';
 
 import { makeStyles } from "@material-ui/core/styles"
 
@@ -47,6 +48,12 @@ const IndexPage = () => {
           href="https://www.linkedin.com/in/riccardo-giomi-663303188/"
         >
           <LinkedIn />
+        </IconButton>
+        <IconButton
+          target="_blank"
+          href="https://github.com/riccardo-giomi"
+        >
+          <GitHubIcon />
         </IconButton>
       </Container>
     </Layout>
